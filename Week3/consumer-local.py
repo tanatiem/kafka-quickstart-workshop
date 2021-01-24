@@ -6,7 +6,7 @@ c = Consumer({
     'auto.offset.reset': 'earliest'
 })
 
-c.subscribe(['streams-pageviewstats-typed-output'])
+c.subscribe(['streams-wordcount-output'])
 
 while True:
     msg = c.poll(1.0)
@@ -17,9 +17,8 @@ while True:
         print("Consumer error: {}".format(msg.error()))
         continue
 
-    #print(msg.value())
     value = msg.value()
-    print(value)
+    
     if value is None:
         value = -1
     else:
