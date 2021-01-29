@@ -73,9 +73,9 @@ Let's describe our topic, to see the details about its replicas:
 This is the output:
 
 ```sh
-Topic: my-first-topic	PartitionCount: 2	ReplicationFactor: 3	Configs: min.insync.replicas=2,segment.bytes=536870912,retention.ms=86400000,retention.bytes=1073741824
-	Topic: my-first-topic	Partition: 0	Leader: 1	Replicas: 1,2,3	Isr: 1,2,3
-	Topic: my-first-topic	Partition: 1	Leader: 2	Replicas: 2,3,4	Isr: 2,3,4
+Topic: my-first-topic   PartitionCount: 2       ReplicationFactor: 3    Configs: segment.bytes=1073741824
+        Topic: my-first-topic   Partition: 0    Leader: 2       Replicas: 2,0,1 Isr: 2,0,1
+        Topic: my-first-topic   Partition: 1    Leader: 1       Replicas: 1,2,0 Isr: 1,2,0
 ```
 
 Here is an explanation of output:
@@ -87,7 +87,7 @@ The additional lines provide information about each partition:
     - **Leader** is the broker currently responsible for reads and writes for the given partition. Each broker will be the leader for a randomly selected portion of the partitions.
     - **Replicas** is the list of brokers that replicate the log for this partition regardless of whether they are the leader or even if they are currently online.
     - **Isr** is the set of **In-Sync Replicas**. This is the subset of the replicas list that is currently online and fully in-sync with the leader.
-
+<!--
 ## Consumer groups
 
 A **consumer group** is a collection of consumers that cooperate to consume a set of topics. Kafka guarantees that, within a group, each partition of a topic will only be consumed by a single consumer.
@@ -162,7 +162,7 @@ There is:
 
 - [`retention.bytes`](https://kafka.apache.org/documentation/#retention.bytes): This specifies the guaranteed minimum size of data for each partition kept in Kafka per partition
 
-Whichever of these limits is reached first will trigger deletion records.
+Whichever of these limits is reached first will trigger deletion records. -->
 
 ## Next Steps
 

@@ -10,7 +10,7 @@ Kafka Connect can run in 2 modes:
 - **Standalone:** This mode is for development and runs in a single process.
 - **Distributed:** This mode is suitable for production environments as it allows scaling dynamically and provides fault tolerance.
 
-In this workshop, we will setup Kafka Connect using the distributed mode.
+In this workshop, we will setup Kafka Connect using the **distributed mode**.
 
 ## Importing data into Kafka from a file
 
@@ -21,7 +21,6 @@ To keep things simple, we will use one of the built-in connectors: [`FileStreamS
 In distributed mode, the first step is to start the Kafka Connect runtime. We need to create a properties file with the correct details to configure Kafka Connect and enable the runtime to connect to our Kafka cluster.
 
 In order to configure Kafka Connect, follow the steps for your Kafka environment:
-- For [Event Streams](./event-streams.md)
 - For [Local Kafka](./local-kafka.md)
 
 By default, the runtime exposes its REST API on port `8083`. You can change this port by setting `rest.port=<PORT>`. The rest of this workshop assumes that the port is `8083`.
@@ -57,6 +56,7 @@ In order to start the connector, we need some configurations. Create a file (c:\
   }
 }
 ```
+* tasks.max - The maximum number of tasks that the specified connector can use. Tasks enable the connector to perform work in parallel. The connector might create fewer tasks than specified.
 
 This instructs the runtime to start the `FileStreamSourceConnector` connector and make it read a file called `c:\\my_config\\file-source.txt`. It will send each line of this file as a message to the `streams-plaintext-input` topic. Finally, `tasks.max` allows to configure how many tasks Kafka Connect should start, which is just 1 in our scenario.
 
@@ -76,7 +76,7 @@ Created topic streams-plaintext-input.
 
 ## Creating and populating the source file
 
-We create the source file and put some content in it:
+We create the source file (c:\\my_config\\file-source.txt) and put some content in it:
 
 ```sh
 first line of content
@@ -91,8 +91,7 @@ Let's start our connector:
 ```sh
 curl -d @"c:\my_config\source1.json" -H "Content-Type: application/json" -X POST http://localhost:8083/connectors
 ```
-
-Where `<CONNECTOR_CONFIG_FILE>` is the path of the JSON file we created above.
+If success, the output is {"name":"file-source","config":{"connector.class":"org.apache.kafka.connect.file.FileStreamSourceConnector","tasks.max":"1","file":"c:\\my_config\\file-source.txt","topic":"streams-plaintext-input","name":"file-source"},"tasks":[],"type":"source"}
 
 We can verify the connector is running:
 
@@ -102,7 +101,7 @@ http://localhost:8083/connectors/file-source/
 
 ## Testing the connector
 
-Now that the connector is running, any line added to `/tmp/file-source.txt` will end up in our topic.
+Now that the connector is running, any line added to `C:\my_config\file-source.txt` will end up in our topic.
 
 Start a consumer on `streams-plaintext-input`:
 ```sh

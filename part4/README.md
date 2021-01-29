@@ -139,18 +139,19 @@ public final class WordCountDemo {
 2. After making these updates done, we need to recompile it. You can do that by running:
 
 ```sh
-./gradlew assemble
+
+
+#Fast and furious version: (4 secs on my pc)
+gradle assemble -x clients:javadoc streams:test-utils:javadoc streams:streams-scala:scaladoc connect:mirror-client:javadoc connect:api:javadoc core:javadoc core:compileScala
 ```
 
-### Running WordCountDemo
-
-Start `WordCountDemo` by using `kafka-run-class.sh` and specify our configuration file.
-
+### After finishing gradle assemble
 ```sh
-> bin\windows\kafka-run-class.bat org.apache.kafka.streams.examples.wordcount.WordCountDemo
+Copy kafka-streams-examples-2.7.0.jar from 
+C:\src\kafka-2.7.0-src\streams\examples\build\libs
+and replace the existing one at 
+C:\kafka_2.13-2.7.0\libs
 ```
-
-The Kafka Streams application will run until interrupted, such as by pressing `CTRL+C`.
 
 ### Checking the result
 
@@ -162,15 +163,21 @@ By default, `WordCountDemo` writes its output in the `streams-wordcount-output` 
 
 While the Kafka Streams application is running, you can keep adding lines to our file and see new counts being emitted.
 
-```sh
-> echo "another line" >> /tmp/file-source.txt
-```
-
-You can also use a producer to directly write records into the input topic:
+(Option) You can also use a producer to directly write records into the input topic:
 
 ```sh
 bin\windows\kafka-console-producer.bat --bootstrap-server "localhost:9092,localhost:9192,localhost:9292" --topic streams-plaintext-input
 ```
+
+### Running WordCountDemo
+
+Start `WordCountDemo` by using `kafka-run-class.bat` and specify our configuration file.
+
+```sh
+> bin\windows\kafka-run-class.bat org.apache.kafka.streams.examples.wordcount.WordCountDemo
+```
+
+The Kafka Streams application will run until interrupted, such as by pressing `CTRL+C`.
 
 ### Looking at the code
 
@@ -197,8 +204,11 @@ The middle statement performs the processing operations. For each record (which 
 
 The last line defines the output stream. Here, we are sending it to our output topic `streams-wordcount-output` and we have to specify a serializer for both the key (words) and the value (current count).
 
+<!--
 The same logic is also implemented using the Processor API, see [WordCountProcessorDemo.java](https://github.com/apache/kafka/blob/trunk/streams/examples/src/main/java/org/apache/kafka/streams/examples/wordcount/WordCountProcessorDemo.java)
 
 ## Next Steps
 
-Continue to [workshop summary](../part4/summary.md).
+Continue to [workshop summary](../part4/summary.md).-->
+
+### Alternative to Java --> Python: https://github.com/robinhood/faust (I haven’t tried yet.)
