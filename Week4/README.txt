@@ -10,9 +10,10 @@ Outline
    3. Double click "3_2_run_python_consume_plotgraph.bat"
    4. Double click "4_compile_pageview_demo.bat"
    5. Double click "5_run_python_publish.bat"
-   
 
 3. More analytical methods
+	1. Sum
+
 4. Connect to Cloud
 5. Testing before real quiz
 	- Send data to all students
