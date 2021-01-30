@@ -17,7 +17,7 @@ for data in Lines:
 
     p.poll(0)
     
-    p.produce('streams-plaintext-input', data.encode('utf-8'), callback=delivery_report)
+    p.produce('iot-temperature', data.encode('utf-8'), callback=delivery_report)
     
     time.sleep(1)
 
