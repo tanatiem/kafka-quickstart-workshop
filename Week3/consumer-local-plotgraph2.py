@@ -1,5 +1,4 @@
 from confluent_kafka import Consumer
-import pandas as pd
 
 c = Consumer({
     'bootstrap.servers': 'localhost:9092,localhost:9192,localhost:9292',
@@ -33,9 +32,15 @@ while True:
     kvalue = msg.key().decode('utf-8')
     print('Received message: {0} , {1}'.format(kvalue, value))
    
-    df = pd.DataFrame(d['sell'])
-
-    df.plot(x='Quantity', y='Rate')
+    lr[kvalue] = value    
+    plt.scatter(list(lr.keys()),list(lr.values()))
+    i = 0
+    for x in range(0,len(list(lr.keys()))): 
+        plt.annotate(list(lr.keys())[x], (i, list(lr.values())[x]+0.1), rotation=30)
+        i = i+1
+        
+    plt.draw()
+    plt.pause(0.1)
 
 plt.show(block=True)
 c.close()
