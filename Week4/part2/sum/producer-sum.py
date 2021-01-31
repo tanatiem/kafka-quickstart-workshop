@@ -11,13 +11,16 @@ def delivery_report(err, msg):
     else:
         print('Message delivered to {} [{}]'.format(msg.topic(), msg.partition()))
 
-file1 = open('myfile.txt', 'r') 
-Lines = file1.readlines()
-for data in Lines:
+
+import json
+
+print("Start producer...")
+data = {"_t": "pv","title":"Die Hard","ticket_total_value":12}
+while True:
 
     p.poll(0)
     
-    p.produce('iot-temperature', data.encode('utf-8'), callback=delivery_report)
+    p.produce('streams-numbers-input', key="", value=json.dumps(data))
     
     time.sleep(1)
 

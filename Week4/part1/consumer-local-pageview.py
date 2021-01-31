@@ -1,5 +1,5 @@
 from confluent_kafka import Consumer
-import pandas as pd
+import time
 
 c = Consumer({
     'bootstrap.servers': 'localhost:9092,localhost:9192,localhost:9292',
@@ -8,13 +8,9 @@ c = Consumer({
 })
 
 c.subscribe(['streams-pageviewstats-typed-output'])
+i = 0
 
-import matplotlib.pyplot as plt
-from matplotlib.pyplot import figure
-figure(num=None, figsize=(10, 6), dpi=80, facecolor='w', edgecolor='k')
-plt.ion()
-
-lr = {}
+print("Start consumer...")
 while True:
     msg = c.poll(1.0)
 
@@ -25,18 +21,17 @@ while True:
         continue
 
     value = msg.value()
-    if value is None:
-        value = 0
-    else:
-        value = msg.value()[-1]
+
+    #if value is None:
+    #    value = -1
+    #else:
+    #    value = msg.value()[-1]
         
     kvalue = msg.key().decode('utf-8')
     print('Received message: {0} , {1}'.format(kvalue, value))
+    time.sleep(1)
+    #i = i+1
    
-    df = pd.DataFrame(d['sell'])
-
-    df.plot(x='Quantity', y='Rate')
-
-plt.show(block=True)
+    
 c.close()
 
