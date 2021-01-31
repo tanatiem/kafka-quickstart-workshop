@@ -3,7 +3,7 @@ import os
 
 from confluent_kafka import Producer
 
-os.environ['CLOUDKARAFKA_BROKERS'] ='tricycle-01.srvs.cloudkafka.com:9094'
+os.environ['CLOUDKARAFKA_BROKERS'] ='tricycle-01.srvs.cloudkafka.com:9094,tricycle-02.srvs.cloudkafka.com:9094,tricycle-03.srvs.cloudkafka.com:9094'
 os.environ['CLOUDKARAFKA_USERNAME'] = "o4zgo7lx"
 os.environ['CLOUDKARAFKA_PASSWORD'] = "x78KarUO8i5ccvEqO0WzEoNR7g7-DIfc"
 os.environ['CLOUDKARAFKA_TOPIC'] = "o4zgo7lx-default"

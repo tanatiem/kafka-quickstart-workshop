@@ -15,8 +15,6 @@ uList = ["user1","user2"]
 pList = ["page1","page2","page3","page4","page5"]
 rList = ["asia","europe","america"]
 
-#r1 = {"_t": "pv", "user":"2", "page":"22", "timestamp":1435278177777}
-#r2 = {"_t": "up", "region":"CA","timestamp":1435278177777} 
 
 import json
 import random

@@ -21,17 +21,10 @@ while True:
         continue
 
     value = msg.value()
-
-    #if value is None:
-    #    value = -1
-    #else:
-    #    value = msg.value()[-1]
         
     kvalue = msg.key().decode('utf-8')
     print('Received message: {0} , {1}'.format(kvalue, value))
-    time.sleep(1)
-    #i = i+1
-   
+    
     
 c.close()
 
