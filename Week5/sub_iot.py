@@ -3,12 +3,12 @@ import logging
 import time
 
 appid = "ekaratnida"
-gearkey = "kXShlIvKRnPaDZh"
-gearsecret =  "sHOwGmPrmDf7sG0wmTODsuuWe"
+gearkey = 'jtD9ag08syPtqiK' # key
+gearsecret = 'vDEEIuw9Ssj4OvbrBHmM4hZfa' # secret
 
 client.create(gearkey,gearsecret,appid,{'debugmode': True}) # สร้างข้อมูลสำหรับใช้เชื่อมต่อ
 
-client.setalias("one") # ตั้งชื่้อ
+client.setalias("ekarat") # ตั้งชื่้อ
 
 def callback_connect() :
     print ("Now I am connected with netpie")

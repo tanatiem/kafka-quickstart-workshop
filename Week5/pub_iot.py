@@ -2,13 +2,13 @@ import microgear.client as client
 import time # ใช้ในการหน่วงเวลา
 
 appid = 'ekaratnida' # ชื่อแอพของเรา
-gearkey = 'Xzmr7PkeLMPWBFt' # key
-gearsecret = 'nKkMNUjdHgwH7ChMxAEyb9G3H' # secret
+gearkey = 'jtD9ag08syPtqiK' # key
+gearsecret = 'vDEEIuw9Ssj4OvbrBHmM4hZfa' # secret
 
 
 client.create(gearkey,gearsecret,appid,{'debugmode': True}) # สร้างข้อมูลสำหรับใช้เชื่อมต่อ
 
-client.setalias("two") # ตั้งชื่้อ
+client.setalias("ekarat") # ตั้งชื่้อ
 
 def callback_connect() :
     print ("Now I am connected with netpie")
@@ -27,8 +27,9 @@ client.connect(False) # เชื่อมต่อ ถ้าใช้ False ไ
 
 i=0
 while i<10:
-    client.chat("one","hello from two") # ส่งข้อมูลไปให้ one
-    time.sleep(0.1) # หน่วงเวลาการส่งข้อมูล 3 วินาที
+    print("send ",i)
+    client.chat("one","hello from Ekarat ") # ส่งข้อมูลไปให้ one
+    time.sleep(1) # หน่วงเวลาการส่งข้อมูล 3 วินาที
     i+=1
 
 print("ok")
