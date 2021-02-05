@@ -6,7 +6,7 @@ from confluent_kafka import Consumer, KafkaException, KafkaError
 os.environ['CLOUDKARAFKA_BROKERS'] ='tricycle-01.srvs.cloudkafka.com:9094,tricycle-02.srvs.cloudkafka.com:9094,tricycle-03.srvs.cloudkafka.com:9094'
 os.environ['CLOUDKARAFKA_USERNAME'] = "o4zgo7lx"
 os.environ['CLOUDKARAFKA_PASSWORD'] = "x78KarUO8i5ccvEqO0WzEoNR7g7-DIfc"
-os.environ['CLOUDKARAFKA_TOPIC'] = "o4zgo7lx-default"
+os.environ['CLOUDKARAFKA_TOPIC'] = "o4zgo7lx-ekarat"
 
 
 if __name__ == '__main__':
@@ -18,7 +18,7 @@ if __name__ == '__main__':
         'bootstrap.servers': os.environ['CLOUDKARAFKA_BROKERS'],
         'group.id': "%s-consumer" % os.environ['CLOUDKARAFKA_USERNAME'],
         'session.timeout.ms': 6000,
-        'default.topic.config': {'auto.offset.reset': 'smallest'},
+        'default.topic.config': {'auto.offset.reset': 'earliest'},
         'security.protocol': 'SASL_SSL',
         'sasl.mechanisms': 'SCRAM-SHA-256',
         'sasl.username': os.environ['CLOUDKARAFKA_USERNAME'],

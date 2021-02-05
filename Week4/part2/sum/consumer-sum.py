@@ -18,14 +18,14 @@ while True:
         print("Consumer error: {}".format(msg.error()))
         continue
 
-    value = msg.value()
+    value = msg.value().decode('utf-8')
 
-    if value is None:
+    '''if value is None:
         value = -1
     else:
-        value = msg.value()[-1]
+        value = msg.value()[-1]'''
         
-    kvalue = msg.key()#.decode('utf-8')
+    kvalue = msg.key().decode('utf-8')
     print('Received message: {0} , {1}'.format(kvalue, value))
     
 c.close()
