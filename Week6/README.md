@@ -17,7 +17,9 @@ Setup Spark
 
 For window only
 6. Create a hadoop\bin folder inside the SPARK_HOME folder
+
 7. Download http://github.com/steveloughran/winutils/raw/master/hadoop-2.6.0/bin/winutils.exe to hadoop\bin
+
 8. Setup hadoop home HADOOP_HOME=%SPARK_HOME%\hadoop
 
 To run program (Wordcount)
