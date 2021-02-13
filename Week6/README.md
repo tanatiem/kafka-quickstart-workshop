@@ -1,7 +1,11 @@
 Week6 (Outline)
+
 6.1 What you've learned so far.
+
 6.2 Spark streaming
+
 6.3 Mobile sensors and user behaviors
+
 6.4 Exercise
 
 Setup Spark
