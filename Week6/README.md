@@ -3,8 +3,10 @@ Week6 (Outline)
 6.1 What you've learned so far.
 
 6.2 Spark streaming
+https://spark.apache.org/docs/latest/streaming-programming-guide.html
 
 6.3 Mobile sensors and user behaviors
+Mobile-sensor.pdf
 
 6.4 Exercise
 
@@ -16,6 +18,7 @@ Setup Spark
 5. Test run "pyspark"
 
 For window only
+
 6. Create a hadoop\bin folder inside the SPARK_HOME folder
 
 7. Download http://github.com/steveloughran/winutils/raw/master/hadoop-2.6.0/bin/winutils.exe to hadoop\bin
@@ -28,5 +31,3 @@ To run program (Wordcount)
 3. Run spark with the following commandline: spark-submit --packages org.apache.spark:spark-streaming-kafka-0-8_2.11:2.3.0 kafka_spark_demo.py
 4. Run a producer to generate a list of words
 
-REF
-[1] https://spark.apache.org/docs/latest/streaming-programming-guide.html
