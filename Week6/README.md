@@ -12,3 +12,7 @@ Setup
 
 To run program (Wordcount) 
 1. spark-submit --packages org.apache.spark:spark-streaming-kafka-0-8_2.11:2.3.0 kafka_spark_demo.py
+
+
+REF
+[1] https://spark.apache.org/docs/latest/streaming-programming-guide.html

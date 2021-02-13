@@ -9,6 +9,7 @@ if __name__=="__main__":
     sc = SparkContext(appName="Kafka Spark Demo")
     sc.setLogLevel("WARN")
     ssc = StreamingContext(sc,60)
+    
     msg = KafkaUtils.createDirectStream(ssc, topics=["testtopic"],kafkaParams={"metadata.broker.list":"localhost:9092"})
     
     words = msg.map(lambda x: x[1]).flatMap(lambda x: x.split(" "))
