@@ -28,7 +28,8 @@ client.connect(False) # เชื่อมต่อ ถ้าใช้ False ไ
 i=0
 while i<10:
     print("send ",i)
-    client.chat("one","hello from Ekarat ") # ส่งข้อมูลไปให้ one
+    #client.chat("siripong","hello from Ekarat ") # ส่งข้อมูลไปให้ one
+    client.publish("/test", "hello from Ekarat" )
     time.sleep(1) # หน่วงเวลาการส่งข้อมูล 3 วินาที
     i+=1
 
