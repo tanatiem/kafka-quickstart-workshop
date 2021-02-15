@@ -26,6 +26,7 @@ For window only
 8. Setup hadoop home HADOOP_HOME=%SPARK_HOME%\hadoop
 
 To run program (Wordcount)
+0. pip install findspark
 1. Start a kafker cluster (zoo + brokers)
 2. Create a topic
 3. Run spark with the following commandline: spark-submit --packages org.apache.spark:spark-streaming-kafka-0-8_2.11:2.3.0 kafka_spark_demo.py
