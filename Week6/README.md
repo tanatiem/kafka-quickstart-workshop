@@ -1,4 +1,4 @@
-**Week6 (Outline)** :hot_face:
+**Week6 (Outline)** :hot_face:::hurtrealbad:
 
 6.1 What you've learned so far.
 
@@ -38,7 +38,8 @@ spark-submit --jars C:\spark-streaming-kafka-0-8-assembly_2.11-2.4.7.jar kafka_s
 ```
 5. Run a producer to generate a list of words
 
-Note
+*Note*
+
 Must use python 3.7 and Java 8
 
 
