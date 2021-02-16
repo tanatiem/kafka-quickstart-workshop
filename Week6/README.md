@@ -33,10 +33,12 @@ For window only
 
 ~~3. Run spark with the following commandline: spark-submit --packages org.apache.spark:spark-streaming-kafka-0-8_2.11:2.3.0 kafka_spark_demo.py~~
 3. Download the "spark-streaming-kafka-0-8-assembly_2.11-2.4.7.jar" file from https://mvnrepository.com/artifact/org.apache.spark/spark-streaming-kafka-0-8-assembly_2.11/2.4.7 or from this github to drive C:\
-4. Run the following command in Week6 path --> C:\Users\STD User\kafka-quickstart-workshop-main\Week6>
+4. :+1: Run the following command 
 ```
-:+1:  spark-submit --jars C:\spark-streaming-kafka-0-8-assembly_2.11-2.4.7.jar kafka_spark_demo.py
+spark-submit --jars C:\spark-streaming-kafka-0-8-assembly_2.11-2.4.7.jar kafka_spark_demo.py
 ```
+in C:\Users\STD User\kafka-quickstart-workshop-main\Week6>
+
 5. Run a producer to generate a list of words
 
 *Note*
