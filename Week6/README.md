@@ -30,11 +30,12 @@ For window only
 0. pip install findspark
 1. Start a kafker cluster (zoo + brokers)
 2. Create a topic
+
 ~~3. Run spark with the following commandline: spark-submit --packages org.apache.spark:spark-streaming-kafka-0-8_2.11:2.3.0 kafka_spark_demo.py~~
-3. Download the file "spark-streaming-kafka-0-8-assembly_2.11-2.4.7.jar" from https://mvnrepository.com/artifact/org.apache.spark/spark-streaming-kafka-0-8-assembly_2.11/2.4.7 or "this github" to drive C:\
-:+1: 4. Run spark with C:\Users\STD User\kafka-quickstart-workshop-main\Week6>
+3. Download the "spark-streaming-kafka-0-8-assembly_2.11-2.4.7.jar" file from https://mvnrepository.com/artifact/org.apache.spark/spark-streaming-kafka-0-8-assembly_2.11/2.4.7 or from this github to drive C:\
+4. Run the following command in Week6 path --> C:\Users\STD User\kafka-quickstart-workshop-main\Week6>
 ```
-spark-submit --jars C:\spark-streaming-kafka-0-8-assembly_2.11-2.4.7.jar kafka_spark_demo.py
+:+1:  spark-submit --jars C:\spark-streaming-kafka-0-8-assembly_2.11-2.4.7.jar kafka_spark_demo.py
 ```
 5. Run a producer to generate a list of words
 
