@@ -34,8 +34,12 @@ To run program (Wordcount)
 4. Run a producer to generate a list of words
 
 Fixed bugs (2/16/2021)
-1. Download the file "spark-streaming-kafka-0-8-assembly_2.11-2.4.7.jar" from https://mvnrepository.com/artifact/org.apache.spark/spark-streaming-kafka-0-8-assembly_2.11/2.4.7 to drive C:\
-2. Run spark with C:\Users\STD User\kafka-quickstart-workshop-main\Week6>spark-submit --jars C:\spark-streaming-kafka-0-8-assembly_2.11-2.4.7.jar kafka_spark_demo.py
+1. Download the file "spark-streaming-kafka-0-8-assembly_2.11-2.4.7.jar" from https://mvnrepository.com/artifact/org.apache.spark/spark-streaming-kafka-0-8-assembly_2.11/2.4.7 or "this github" to drive C:\
+
+2. Run spark with C:\Users\STD User\kafka-quickstart-workshop-main\Week6>
+
+spark-submit --jars C:\spark-streaming-kafka-0-8-assembly_2.11-2.4.7.jar kafka_spark_demo.py
+
 3. Must use python 3.7
 
 
