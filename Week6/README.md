@@ -1,4 +1,4 @@
-**Week6 (Outline)**
+**Week6 (Outline)** :hot_face:
 
 6.1 What you've learned so far.
 
@@ -32,7 +32,7 @@ For window only
 2. Create a topic
 ~~3. Run spark with the following commandline: spark-submit --packages org.apache.spark:spark-streaming-kafka-0-8_2.11:2.3.0 kafka_spark_demo.py~~
 3. Download the file "spark-streaming-kafka-0-8-assembly_2.11-2.4.7.jar" from https://mvnrepository.com/artifact/org.apache.spark/spark-streaming-kafka-0-8-assembly_2.11/2.4.7 or "this github" to drive C:\
-4. Run spark with C:\Users\STD User\kafka-quickstart-workshop-main\Week6>
+:+1: 4. Run spark with C:\Users\STD User\kafka-quickstart-workshop-main\Week6>
 ```
 spark-submit --jars C:\spark-streaming-kafka-0-8-assembly_2.11-2.4.7.jar kafka_spark_demo.py
 ```
