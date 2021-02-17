@@ -1,4 +1,4 @@
-**Week6 (Outline)** :hot_face:::hurtrealbad:
+**Week6 (Outline)** :hot_face:::hurtrealbad::hurtrealbad::hurtrealbad::hurtrealbad::hurtrealbad::hurtrealbad::hurtrealbad::hurtrealbad:
 
 6.1 What you've learned so far.
 
