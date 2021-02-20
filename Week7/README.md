@@ -1,4 +1,4 @@
-**Week 7 (Outline)** 
+***iWeek 7 (Outline)** 
 
 7.1 What you've learned so far  
     - Continue Week 6 Mobile sensors  
