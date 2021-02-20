@@ -1,5 +1,5 @@
-***Week 7 (Outline)***
-:hurtrealbad::hurtrealbad:
+***Week 7 (Outline)***</br>
+:hurtrealbad::hurtrealbad:</br>
 7.1 What you've learned so far</br>  
         - Continue Week 6 Mobile sensors  </br>
         - Continue https://spark.apache.org/docs/latest/streaming-programming-guide.html  </br>
