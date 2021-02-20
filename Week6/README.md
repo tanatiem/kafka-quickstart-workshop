@@ -1,6 +1,7 @@
 **Week6 (Outline)** :hot_face:::hurtrealbad::hurtrealbad::hurtrealbad::hurtrealbad::hurtrealbad::hurtrealbad::hurtrealbad::hurtrealbad:
 
 6.1 What you've learned so far.
+![img1](./img1.png)
 
 6.2 Spark streaming
 https://spark.apache.org/docs/latest/streaming-programming-guide.html
