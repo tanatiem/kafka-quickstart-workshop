@@ -9,7 +9,7 @@
 7.2 Spark Streaming Machine Learning (Traditional way)
 
         - Introduce MLlib
-        - Twitter sentiment analysis
+        - Twitter sentiment analysis https://github.com/lakshay-arora/PySpark/tree/master/spark_streaming
 
 7.3 Spark Streaming Machine Learning (Streaming way)
 
