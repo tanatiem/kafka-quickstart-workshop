@@ -6,7 +6,7 @@ Outline
 
 1.5 Review, Wordcount, Temperature
 
-2. PaveViewDemo
+2. PageViewDemo
    1. Start kafka cluster --> double click "1_start_cluster.bat".
    2. Create a topic --> double click "2_create_pageview_topics.bat" --> Press 'Enter' when finish.
    3. Double click "3_2_run_python_consume_plotgraph.bat"
