@@ -5,3 +5,5 @@
 - Activity data: Running, Standing, Waling (CSV)
 - Notebook to plot the activity data
 - Android application
+- Example of subscribers
+- ![ex1](./ex1.png)
