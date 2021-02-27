@@ -6,4 +6,5 @@
 - Notebook to plot the activity data
 - Android application
 - Example of subscribers
+- Header (time (ms), x, y, z (axis of accelerometer)
 - ![ex1](./ex1.png)
