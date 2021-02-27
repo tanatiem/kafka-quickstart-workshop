@@ -4,4 +4,4 @@
 
 - Activity data: Running, Standing, Waling (CSV)
 - Notebook to plot the activity data
--
+- Android application
