@@ -2,9 +2,8 @@ import microgear.client as client
 import time # ใช้ในการหน่วงเวลา
 
 appid = 'ekaratnida' # ชื่อแอพของเรา
-gearkey = 'jtD9ag08syPtqiK' # key
-gearsecret = 'vDEEIuw9Ssj4OvbrBHmM4hZfa' # secret
-
+gearkey = 'ztyeDIYOjxDuJt6' #'jtD9ag08syPtqiK' # key
+gearsecret = 'W1wwaSMXA4ez3qXPlhqw09CxR' #'vDEEIuw9Ssj4OvbrBHmM4hZfa' # secret
 
 client.create(gearkey,gearsecret,appid,{'debugmode': True}) # สร้างข้อมูลสำหรับใช้เชื่อมต่อ
 
