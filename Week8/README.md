@@ -3,7 +3,7 @@
 8.1 Activity monitoring data
 
 - Activity data: Running, Standing, Waling (CSV)
-- Notebook to plot the activity data
+- Notebook to show the example of activity data
 - Android application
 - Example of subscribers
 - Header (time (ms), x, y, z (axis of accelerometer)
