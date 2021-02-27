@@ -1,5 +1,5 @@
 ***Week 8 (Outline)***</br>
-:hurtrealbad::hurtrealbad:</br>
+:walking_man: :running_man: :standing_person:</br>
 8.1 Activity monitoring data
 
 - Activity data: Running, Standing, Waling (CSV)
